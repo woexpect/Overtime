@@ -1,18 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  describe "creation" do
+  describe "Creation" do
     before do
-      @post = Post.create(date: Date.today, rationale: "Anything")
-    end
-    it "can be created" do
-      # TODO This test doesnt pass cause there is no session
-      expect(@post).to be_valid
-    end
-    it "cannot be created whitout a date and rationale" do
-      @post.date = nil
-      @post.rationale = nil
-      expect(@post).to_not be_valid
-    end
+      @user = User.create(email: "test@test.com", password: "asdasd", password_confirmation: "asdasd", first_name: "Jhon", last_name: "Snow")
+  		@post = Post.create(date: Date.today, rationale: "Anything", user: @user)
+  	end
+
+  	it 'can be created' do	
+  		expect(@post).to be_valid
+  	end
+
+  	it 'cannot be created without a date and rationale' do
+  		@post.date = nil
+  		@post.rationale = nil
+  		expect(@post).to_not be_valid
+  	end
   end
 end
