@@ -1,7 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "posts.css";
+@import "gritter";
 
 .custom-nav {
     margin-top: 16px;
+}
+
+.custom_gritter {
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid white;
 }
