@@ -14,7 +14,7 @@ FactoryGirl.define do
         first_name 'admin'
         last_name 'user'
         email { generate :email }
-        password 'admin'
-        password_confirmation 'admin'
+        password 'admin123'
+        password_confirmation 'admin123'
     end
 end
