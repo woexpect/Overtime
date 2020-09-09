@@ -1,7 +1,7 @@
 FactoryGirl.define do
     factory :post do
         date Date.today
-        rationale "Some rationale"
+        rationale "Some rationale" 
         user
     end
 
@@ -10,4 +10,4 @@ FactoryGirl.define do
         rationale "Some more content"
         user
     end
-end
+end 
