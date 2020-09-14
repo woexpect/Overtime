@@ -12,9 +12,16 @@ RSpec.describe User, type: :model do
       expect(@user).to be_valid
     end
 
-    it "cannot be created whitout first_name, last_name" do 
+    it "cannot be created whitout first_name" do 
       @user.first_name = nil
+      expect(@user).to_not be_valid
+    end
+    it "cannot be created whitout last_name" do 
       @user.last_name = nil
+      expect(@user).to_not be_valid
+    end
+    it "cannot be created whitout phone" do 
+      @user.phone = nil
       expect(@user).to_not be_valid
     end
   end
