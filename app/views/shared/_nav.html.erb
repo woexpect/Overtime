@@ -11,7 +11,7 @@
 			<%= link_to "Time Entries", posts_path %>
 		</li>
 		<% if policy(AuditLog).index? %>
-			<li class="<%= active?(new_post_path)%>">
+			<li class="<%= active?(audit_logs_path)%>">
 				<%= link_to "Audit Log", audit_logs_path, id: 'new_post_from_nav' %>
 			</li>
 		<% end %>
